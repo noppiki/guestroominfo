@@ -1,0 +1,407 @@
+/* ========================================
+   ゲストルーム・パーティールーム経路案内
+   レスポンシブスタイルシート
+======================================== */
+
+/* リセットと基本設定 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f7fa;
+}
+
+/* ========================================
+   ナビゲーション
+======================================== */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.nav-link {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background: #e8f4fd;
+    color: #2196F3;
+}
+
+/* ========================================
+   メインコンテンツ
+======================================== */
+.main {
+    padding-top: 60px;
+}
+
+/* ヘッダー */
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+/* ========================================
+   セクション・カード
+======================================== */
+.section {
+    padding: 1rem;
+    scroll-margin-top: 60px;
+}
+
+.card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.25rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-bottom: 1px solid #eee;
+}
+
+.card-header .icon {
+    font-size: 1.75rem;
+}
+
+.card-header h2 {
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.card-content {
+    padding: 1.25rem;
+}
+
+/* ========================================
+   ルート手順
+======================================== */
+.route-steps {
+    list-style: none;
+    counter-reset: step;
+}
+
+.route-steps li {
+    position: relative;
+    padding: 0.75rem 0 0.75rem 3rem;
+    border-bottom: 1px solid #f0f0f0;
+    counter-increment: step;
+}
+
+.route-steps li:last-child {
+    border-bottom: none;
+}
+
+.route-steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2rem;
+    height: 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.875rem;
+}
+
+.route-steps li strong {
+    color: #2196F3;
+}
+
+/* ========================================
+   情報ボックス
+======================================== */
+.info-box {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background: #e8f4fd;
+    border-radius: 8px;
+    margin: 1rem 0;
+    font-size: 0.95rem;
+}
+
+.info-icon {
+    font-size: 1.25rem;
+}
+
+.info-box strong {
+    color: #1976D2;
+}
+
+/* ========================================
+   地図
+======================================== */
+.map-container {
+    margin-top: 1rem;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+    display: block;
+}
+
+/* ========================================
+   建物内セクション
+======================================== */
+.autolock-info {
+    background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+    padding: 1.25rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.autolock-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #e65100;
+}
+
+.room-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.room-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.room-button.guest {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    border: 2px solid #2196F3;
+}
+
+.room-button.party {
+    background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%);
+    border: 2px solid #e91e63;
+}
+
+.room-label {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.room-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    letter-spacing: 0.1em;
+}
+
+.room-action {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* 部屋別ルート */
+.room-route {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid #f0f0f0;
+}
+
+.room-route:first-of-type {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+}
+
+.room-route h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* ========================================
+   フッター
+======================================== */
+.footer {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background: #333;
+    color: #aaa;
+    font-size: 0.85rem;
+}
+
+/* ========================================
+   タブレット・PC対応 (768px以上)
+======================================== */
+@media (min-width: 768px) {
+    .nav-container {
+        gap: 2rem;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+        padding: 0.6rem 1.5rem;
+    }
+
+    .header {
+        padding: 3rem 2rem;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .section {
+        padding: 1.5rem 2rem;
+    }
+
+    .card-header {
+        padding: 1.5rem;
+    }
+
+    .card-header .icon {
+        font-size: 2rem;
+    }
+
+    .card-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .card-content {
+        padding: 1.5rem;
+    }
+
+    .route-steps li {
+        padding: 1rem 0 1rem 3.5rem;
+        font-size: 1.05rem;
+    }
+
+    .route-steps li::before {
+        width: 2.25rem;
+        height: 2.25rem;
+    }
+
+    .map-container iframe {
+        height: 300px;
+    }
+
+    .room-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .room-button {
+        flex: 1;
+        max-width: 200px;
+    }
+
+    .autolock-info {
+        padding: 1.5rem;
+    }
+
+    .footer {
+        padding: 2rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* ========================================
+   PC対応 (1024px以上)
+======================================== */
+@media (min-width: 1024px) {
+    .card {
+        max-width: 700px;
+    }
+
+    .header h1 {
+        font-size: 2.25rem;
+    }
+
+    .map-container iframe {
+        height: 350px;
+    }
+}
+
+/* ========================================
+   アクセシビリティ
+======================================== */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .nav-link {
+        transition: none;
+    }
+}
+
+/* フォーカス時のスタイル */
+.nav-link:focus {
+    outline: 2px solid #2196F3;
+    outline-offset: 2px;
+}
+
+/* 高コントラストモード対応 */
+@media (prefers-contrast: high) {
+    .route-steps li::before {
+        background: #000;
+    }
+
+    .card {
+        border: 2px solid #333;
+    }
+}

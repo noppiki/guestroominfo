@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ゲストルーム・パーティールームへの行き方</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 固定ナビゲーション -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#train" class="nav-link">電車</a>
+            <a href="#brt" class="nav-link">BRT</a>
+            <a href="#building" class="nav-link">建物内</a>
+        </div>
+    </nav>
+
+    <main class="main">
+        <!-- ヘッダー -->
+        <header class="header">
+            <h1>ゲストルーム・パーティールーム<br>経路案内</h1>
+        </header>
+
+        <!-- セクション1: 電車ルート -->
+        <section id="train" class="section">
+            <div class="card">
+                <div class="card-header">
+                    <span class="icon">🚃</span>
+                    <h2>電車でのアクセス</h2>
+                </div>
+                <div class="card-content">
+                    <ol class="route-steps">
+                        <li><strong>都営大江戸線 勝どき駅</strong> A3a口を出る</li>
+                        <li>出口から<strong>直進</strong></li>
+                        <li>橋を渡った先の<strong>交差点を渡る</strong></li>
+                        <li>交差点を渡ったら<strong>すぐ左</strong>の建物</li>
+                    </ol>
+                    <div class="info-box">
+                        <span class="info-icon">⏱️</span>
+                        <span>徒歩約<strong>7分</strong>（500m）</span>
+                    </div>
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d3241.6!2d139.7763!3d35.6571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x60188beeb3c69f39%3A0x8f5c4c95c0c4c0c0!2z5Yud44Gp44GN6aeF!3m2!1d35.6594!2d139.7763!4m5!1s0x60188beddb8f0001%3A0x1!2z5Yud44Gp44GN44K_44Ov44O844Oe44Oz44K344On44Oz!3m2!1d35.6558!2d139.7783!5e0!3m2!1sja!2sjp!4v1"
+                            width="100%"
+                            height="250"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- セクション2: BRTルート -->
+        <section id="brt" class="section">
+            <div class="card">
+                <div class="card-header">
+                    <span class="icon">🚌</span>
+                    <h2>BRTでのアクセス</h2>
+                </div>
+                <div class="card-content">
+                    <ol class="route-steps">
+                        <li><strong>ゆりかもめ新橋駅</strong>付近のBRT乗り場へ</li>
+                        <li><strong>ミチノテラス豊洲</strong> または <strong>国際展示場</strong>行きに乗車</li>
+                        <li><strong>勝どきBRT</strong>で降車</li>
+                        <li>進行方向と<strong>逆方向に戻る</strong></li>
+                        <li>交差点の向かい、<strong>マルエツが入っている建物</strong></li>
+                    </ol>
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d6483.5!2d139.76!3d35.66!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e3!4m5!1s0x60188bfbd9fd7001%3A0x1!2z5paw5qmL6aeF!3m2!1d35.6656!2d139.7588!4m5!1s0x60188beddb8f0001%3A0x1!2z5Yud44Gp44GNSFJD!3m2!1d35.6558!2d139.7783!5e0!3m2!1sja!2sjp!4v1"
+                            width="100%"
+                            height="250"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- セクション3: 建物内ルート -->
+        <section id="building" class="section">
+            <div class="card">
+                <div class="card-header">
+                    <span class="icon">🏢</span>
+                    <h2>建物内のご案内</h2>
+                </div>
+                <div class="card-content">
+                    <!-- オートロック情報 -->
+                    <div class="autolock-info">
+                        <h3>🔐 オートロック解除</h3>
+                        <div class="room-buttons">
+                            <div class="room-button guest">
+                                <span class="room-label">ゲストルーム</span>
+                                <span class="room-number">2628</span>
+                                <span class="room-action">を呼び出し</span>
+                            </div>
+                            <div class="room-button party">
+                                <span class="room-label">パーティールーム</span>
+                                <span class="room-number">2129</span>
+                                <span class="room-action">を呼び出し</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ゲストルームへの行き方 -->
+                    <div class="room-route">
+                        <h3>🛏️ ゲストルーム（26階）</h3>
+                        <ol class="route-steps">
+                            <li><strong>26階</strong>へ上がる</li>
+                            <li>エレベーターを降りたら<strong>右側</strong>のエレベーターホールへ</li>
+                            <li>ホールを出て<strong>右方向</strong>へ進む</li>
+                            <li><strong>突き当たりを右</strong>に曲がる</li>
+                            <li><strong>2628号室</strong></li>
+                        </ol>
+                    </div>
+
+                    <!-- パーティールームへの行き方 -->
+                    <div class="room-route">
+                        <h3>🎉 パーティールーム（21階）</h3>
+                        <ol class="route-steps">
+                            <li><strong>21階</strong>へ上がる</li>
+                            <li>エレベーターを降りたら<strong>右側</strong>のエレベーターホールへ</li>
+                            <li><strong>標識に従って</strong>進む</li>
+                            <li><strong>2129号室</strong></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <p>ご不明点がございましたら、上記の部屋番号へご連絡ください</p>
+    </footer>
+</body>
+</html>
